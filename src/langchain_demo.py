@@ -16,7 +16,7 @@ milvus_port = '19530'
 collection_name = 'llm_demo'
 
 
-def document_qa_chain(query):
+def document_qa_chain():
 
 	embedding_func = OpenAIEmbeddings()
 	milvus_retriever = MilvusRetriever(
@@ -25,9 +25,8 @@ def document_qa_chain(query):
 		connection_args={"host": milvus_host, "port": milvus_port},
 	)
 
-	qa = RetrievalQA.from_chain_type(llm=OpenAI(), chain_type="stuff", retriever=milvus_retriever)
+	return RetrievalQA.from_chain_type(llm=OpenAI(), chain_type="stuff", retriever=milvus_retriever)
 	
-	return qa.run(query)
 	
 
 
