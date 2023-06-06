@@ -55,6 +55,9 @@ def query():
 	print(docs[0].page_content)
 
 
+
+
+
 if __name__ == '__main__':
 	# load_documents()
 	query()
