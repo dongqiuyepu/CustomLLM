@@ -8,7 +8,8 @@ import os
 from retrievers.milvus import MilvusRetriever
 
 
-os.environ["OPENAI_API_KEY"] = getpass.getpass('OpenAI API Key:')
+# os.environ["OPENAI_API_KEY"] = getpass.getpass('OpenAI API Key:')
+os.environ["OPENAI_API_KEY"] = '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'
 
 milvus_host = '127.0.0.1'
 milvus_port = '19530'
@@ -25,7 +26,7 @@ def document_qa_chain():
 		connection_args={"host": milvus_host, "port": milvus_port},
 	)
 
-	return RetrievalQA.from_chain_type(llm=OpenAI(), chain_type="stuff", retriever=milvus_retriever)
+	return RetrievalQA.from_chain_type(llm=OpenAI(temprature=0.0), chain_type="stuff", retriever=milvus_retriever)
 	
 	
 
