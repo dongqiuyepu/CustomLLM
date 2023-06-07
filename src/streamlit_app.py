@@ -1,7 +1,7 @@
 import streamlit as st
 
 from langchain_demo import document_qa_chain
-from data_loader import load_documents
+from data_loader import load_documents_from_file_upload
 
 
 def main_func():
@@ -10,7 +10,7 @@ def main_func():
     document = st.file_uploader("Upload your .txt document for QA", type=["txt"])
     if document:
         with st.spinner("Indexing your document..."):
-            load_documents(document)
+            load_documents_from_file_upload(document)
 
     question = st.text_input("Enter your question here...")
 
