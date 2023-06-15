@@ -14,3 +14,12 @@ Run `data_loader.py` with `load_documents` function
         To install streamlit, just run `pip install streamlit`. You will be promped for openAI API key, please enter your key to proceed.
 
 - It will open a browser where you can enter question and get an answer
+
+
+## Notes
+
+If mysql is complaining about credentials, can try to reset volume data first and restart container:
+
+`docker-compose down -v`
+`docker-compose up -d`
+
