@@ -9,7 +9,7 @@ from retrievers.milvus import MilvusRetriever
 
 
 # os.environ["OPENAI_API_KEY"] = getpass.getpass('OpenAI API Key:')
-os.environ["OPENAI_API_KEY"] = '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'
+os.environ["OPENAI_API_KEY"] = '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'
 
 milvus_host = '127.0.0.1'
 milvus_port = '19530'
