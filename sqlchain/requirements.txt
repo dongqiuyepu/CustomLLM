@@ -1,0 +1,2 @@
+langchain~=0.0.191
+pandas~=1.5.3
