@@ -2,7 +2,7 @@ from langchain import SQLDatabaseChain
 
 
 def sql_chain_load(llm, db, prompt):
-    sqlchain = SQLDatabaseChain.from_llm(llm, db, prompt, verbose=True, top_k=3)
+    sqlchain = SQLDatabaseChain.from_llm(llm, db, prompt, verbose=True)
     return sqlchain
 
 
