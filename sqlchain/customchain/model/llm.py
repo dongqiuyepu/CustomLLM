@@ -8,13 +8,13 @@ def llm_load():
 
 
 def prompt_load():
-    _DEFAULT_TEMPLATE = """Given an input question, first create a syntactically correct {dialect} query to run,
-    then return the results of the query in JSON format with the following keys: country,gdp,happiness_index.
+    _DEFAULT_TEMPLATE = """Given an input question, first create a syntactically correct {dialect} query to run, then look at the results of the query and return the answer.
     Use the following format:
 
     Question: "Question here"
     SQLQuery: "SQL Query to run"
     SQLResult: "Result of the SQLQuery"
+    Answer: "Output a json object that contains the following keys: country,gdp,happiness_index."
 
     Only use the following tables:
     {table_info}
