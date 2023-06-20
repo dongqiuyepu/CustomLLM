@@ -1,11 +1,9 @@
-Install sqlite db 
+Install sqlite db
 
-pip freeze -r requirements.txt
+Install dependencies with command: pip freeze -r requirements.txt
 
-create a database called Chinook. You can do this by connecting to SQLite with the following command:
-sqlite3 Chinook.db
+Create a database called Chinook. You can do this by connecting to SQLite with the following command: sqlite3 Chinook.db
 
-Now you can run the script. To run it from the file, use the following command:
-.read Chinook_Sqlite.sql
+Now you can run the script. To run it from the file, use the following command: .read Chinook_Sqlite.sql
 
-perform main.py
+Perform src/main.py to plot the histogram
