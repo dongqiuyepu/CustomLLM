@@ -11,11 +11,7 @@ db = SQLDatabase.from_uri(DATABASE_URL)
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 llm = OpenAI(temperature=0, openai_api_key=OPENAI_API_KEY)
 
-# res = llm.predict("Hi")
-
-
 sql_chain = SQLDatabaseChain.from_llm(llm, db, verbose=True)
-
 
 from langchain.callbacks import get_openai_callback
 from langchain.chains import RetrievalQA
@@ -62,8 +58,20 @@ from langchain.agents import AgentType, Tool, initialize_agent, load_tools
 
 tools = []
 
-tools.append(Tool(name="sql chain", func=sql_chain.run, description="sql chain"))
-tools.append(Tool(name="doc chain", func=doc_chain.run, description="doc chain"))
+tools.append(
+    Tool(
+        name="sql chain",
+        func=sql_chain.run,
+        description="useful for when you need to answer questions about countries",
+    )
+)
+tools.append(
+    Tool(
+        name="doc chain",
+        func=doc_chain.run,
+        description="useful for when you need to answer questions about Ketanji Brown Jackson",
+    )
+)
 
 agent = initialize_agent(
     tools,
