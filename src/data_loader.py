@@ -13,7 +13,8 @@ from langchain.docstore.document import Document
 
 
 
-os.environ['OPENAI_API_KEY'] = getpass.getpass('OpenAI API Key:')
+# os.environ['OPENAI_API_KEY'] = getpass.getpass('OpenAI API Key:')
+os.environ["OPENAI_API_KEY"] = 'sk-PTmnlhddbLlcNr6XnLxoT3BlbkFJz1dezeP8BUBp0YKm45E'
 
 document_path = '../data/state_of_the_union.txt'
 splitter_chunk_size = 1000
@@ -24,10 +25,26 @@ milvus_port = '19530'
 milvus_collection = 'llm_demo'
 
 
+
 def load_documents_from_file_upload(uploaded_document):
 	
 	# read content off user upload
 	text = uploaded_document.getvalue().decode("utf-8")
+	__do_document_loading(text)
+
+
+def load_documents_from_file_path(file_path):
+	data = ''
+	with open(file_path, 'r') as f:
+		data = f.read()
+
+	__do_document_loading(data)
+
+	
+def __do_document_loading(text):
+	if not text:
+		raise Exception("Input text is empty, not loading...")
+
 	documents = [Document(page_content=text, metadata={"source": document_path})]
 	
 	# Split document into chunks
@@ -46,6 +63,9 @@ def load_documents_from_file_upload(uploaded_document):
 	)
 
 
+###############################################################
+#### One time functions ####
+###############################################################
 def load_documents():
 
 	# Load document

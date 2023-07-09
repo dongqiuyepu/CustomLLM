@@ -1,0 +1,231 @@
+2023-06-27 10:24:43 [INFO] Running PandasAI with langchain_openai-chat LLM...
+2023-06-27 10:24:43 [INFO] Prompt ID: 826130cf-ee0e-4767-b1d1-c549026aca4f
+2023-06-27 10:25:43 [INFO] Running PandasAI with langchain_openai-chat LLM...
+2023-06-27 10:25:43 [INFO] Prompt ID: 9b63a8d1-7ced-4994-9bc0-c2bdd38ab4b8
+2023-06-27 10:25:57 [INFO] Running PandasAI with langchain_openai-chat LLM...
+2023-06-27 10:25:57 [INFO] Prompt ID: 306ffd9c-ab4d-4b88-b5e7-141ac7c0016a
+2023-06-27 10:26:19 [INFO] Running PandasAI with langchain_openai-chat LLM...
+2023-06-27 10:26:19 [INFO] Prompt ID: 2f9d88f0-c4f0-4b2e-9244-604af5ac9476
+2023-06-27 10:26:52 [INFO] Running PandasAI with langchain_openai-chat LLM...
+2023-06-27 10:26:52 [INFO] Prompt ID: 08da2822-75a7-492c-8ed7-6a5f93e287b6
+2023-06-27 10:29:10 [INFO] Running PandasAI with langchain_openai-chat LLM...
+2023-06-27 10:29:10 [INFO] Prompt ID: a3361738-d56c-4d53-a42f-c4309494a6a4
+2023-06-27 10:29:16 [INFO] Running PandasAI with langchain_openai-chat LLM...
+2023-06-27 10:29:16 [INFO] Prompt ID: e97ba736-87c5-49d8-8492-3417c8b651e6
+2023-06-27 10:29:43 [INFO] Running PandasAI with openai LLM...
+2023-06-27 10:29:43 [INFO] Prompt ID: 478f5681-b920-4857-8014-4e78d259a5b8
+2023-06-27 10:30:19 [INFO] Running PandasAI with openai LLM...
+2023-06-27 10:30:19 [INFO] Prompt ID: bfd4fc5c-206a-4b40-9c8e-6886dc776582
+2023-06-27 10:30:55 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+
+df = pd.DataFrame({
+    'country': ['Germany', 'France', 'United States', 'United Kingdom', 'Italy'],
+    'gdp': [3435817336832, 9959042568, 6494163304, 8254917012, 3746715586],
+    'happiness_index': [6.38, 7.07, 6.38, 6.66, 7.16]
+})
+
+# Sort the dataframe by happiness index in descending order
+df_sorted = df.sort_values(by='happiness_index', ascending=False)
+
+# Get the top 5 happiest countries
+top_5_happiest = df_sorted.head(5)['country']
+
+print(top_5_happiest)
+                        ```
+                    
+2023-06-27 10:30:55 [INFO] 
+Code running:
+```
+df_sorted = df.sort_values(by='happiness_index', ascending=False)
+top_5_happiest = df_sorted.head(5)['country']
+print(top_5_happiest)
+```
+2023-06-27 10:30:55 [INFO] Answer: 6            Canada
+7         Australia
+1    United Kingdom
+3           Germany
+0     United States
+Name: country, dtype: object
+2023-06-27 10:30:55 [INFO] Executed in: 36.041834354400635s
+2023-06-27 12:21:40 [INFO] Running PandasAI with openai LLM...
+2023-06-27 12:21:40 [INFO] Prompt ID: 97de75fc-9dfd-4ddc-84c0-8b725afed228
+2023-06-27 12:21:40 [INFO] Using cached response
+2023-06-27 12:21:40 [INFO] 
+Code running:
+```
+df_sorted = df.sort_values(by='happiness_index', ascending=False)
+top_5_happiest = df_sorted.head(5)['country']
+print(top_5_happiest)
+```
+2023-06-27 12:21:40 [INFO] Answer: 6            Canada
+7         Australia
+1    United Kingdom
+3           Germany
+0     United States
+Name: country, dtype: object
+2023-06-27 12:21:40 [INFO] Executed in: 0.002428293228149414s
+2023-06-27 12:22:27 [INFO] Running PandasAI with openai LLM...
+2023-06-27 12:22:27 [INFO] Prompt ID: cd636a48-1f32-4226-a1f5-64d40110ed3c
+2023-06-27 12:22:45 [INFO] 
+                        Code generated:
+                        ```
+                        import matplotlib.pyplot as plt
+
+colors = ['red', 'blue', 'green', 'orange', 'purple']
+plt.bar(df['country'], df['gdp'], color=colors)
+plt.xlabel('Country')
+plt.ylabel('GDP')
+plt.title('GDP by Country')
+plt.show()
+                        ```
+                    
+2023-06-27 12:22:45 [INFO] 
+Code running:
+```
+colors = ['red', 'blue', 'green', 'orange', 'purple']
+plt.bar(df['country'], df['gdp'], color=colors)
+plt.xlabel('Country')
+plt.ylabel('GDP')
+plt.title('GDP by Country')
+plt.show()
+plt.close('all')
+```
+2023-06-27 12:22:50 [INFO] Answer: None
+2023-06-27 12:22:50 [INFO] Executed in: 22.242950916290283s
+2023-06-27 12:25:48 [INFO] Running PandasAI with openai LLM...
+2023-06-27 12:25:48 [INFO] Prompt ID: cc78a647-45f7-452e-8a4a-0d178b906217
+2023-06-27 12:25:48 [INFO] Using cached response
+2023-06-27 12:25:48 [INFO] 
+Code running:
+```
+colors = ['red', 'blue', 'green', 'orange', 'purple']
+plt.bar(df['country'], df['gdp'], color=colors)
+plt.xlabel('Country')
+plt.ylabel('GDP')
+plt.title('GDP by Country')
+plt.show()
+plt.close('all')
+```
+2023-06-27 21:35:29 [INFO] Running PandasAI with openai LLM...
+2023-06-27 21:35:29 [INFO] Prompt ID: 3239f615-fb12-4742-88e6-2356fc7b6d1d
+2023-06-27 21:35:50 [INFO] 
+                        Code generated:
+                        ```
+                        import matplotlib.pyplot as plt
+
+plt.bar(df['company'], df['avg_salary'], color=['red', 'blue'])
+plt.xlabel('Company')
+plt.ylabel('Average Salary')
+plt.title('Histogram of Companies by Average Salary')
+plt.show()
+                        ```
+                    
+2023-06-27 21:35:50 [INFO] 
+Code running:
+```
+plt.bar(df['company'], df['avg_salary'], color=['red', 'blue'])
+plt.xlabel('Company')
+plt.ylabel('Average Salary')
+plt.title('Histogram of Companies by Average Salary')
+plt.show()
+plt.close('all')
+```
+2023-06-27 21:36:00 [INFO] Answer: None
+2023-06-27 21:36:00 [INFO] Executed in: 31.346538066864014s
+2023-06-27 21:44:15 [INFO] Running PandasAI with openai LLM...
+2023-06-27 21:44:15 [INFO] Prompt ID: fafde2b6-ba1d-4f78-82d0-3b68bc2e1aa7
+2023-06-27 21:44:15 [INFO] Using cached response
+2023-06-27 21:44:15 [INFO] 
+Code running:
+```
+plt.bar(df['company'], df['avg_salary'], color=['red', 'blue'])
+plt.xlabel('Company')
+plt.ylabel('Average Salary')
+plt.title('Histogram of Companies by Average Salary')
+plt.show()
+plt.close('all')
+```
+2023-06-27 21:44:15 [INFO] Answer: None
+2023-06-27 21:44:15 [INFO] Executed in: 0.15961599349975586s
+2023-06-28 11:15:10 [INFO] Running PandasAI with openai LLM...
+2023-06-28 11:15:10 [INFO] Prompt ID: d6051ef7-bd36-4b37-bcf9-c0817953da9e
+2023-06-28 11:15:15 [INFO] 
+                        Code generated:
+                        ```
+                        import matplotlib.pyplot as plt
+
+df.plot(kind='bar', x='country', y='gdp', color=['red', 'blue', 'green', 'yellow', 'orange'])
+plt.xlabel('Country')
+plt.ylabel('GDP')
+plt.title('GDP by Country')
+plt.show()
+                        ```
+                    
+2023-06-28 11:15:15 [INFO] Charts saving to: /opt/homebrew/lib/python3.9/site-packages/exports/charts/d6051ef7-bd36-4b37-bcf9-c0817953da9e
+2023-06-28 11:15:15 [INFO] 
+Code running:
+```
+df.plot(kind='bar', x='country', y='gdp', color=['red', 'blue', 'green',
+    'yellow', 'orange'])
+plt.xlabel('Country')
+plt.ylabel('GDP')
+plt.title('GDP by Country')
+plt.savefig(
+    '/opt/homebrew/lib/python3.9/site-packages/exports/charts/d6051ef7-bd36-4b37-bcf9-c0817953da9e/chart.png'
+    )
+plt.show()
+plt.close('all')
+```
+2023-06-28 11:15:15 [INFO] Answer: None
+2023-06-28 11:15:15 [INFO] Executed in: 5.276808977127075s
+2023-06-28 11:15:24 [INFO] error_code=None error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-RjRFj4pbNhbJbrFhmww2up33 on requests per min. Limit: 3 / min. Please try again in 20s. Contact us through our help center at help.openai.com if you continue to have issues. Please add a payment method to your account to increase your rate limit. Visit https://platform.openai.com/account/billing to add a payment method.' error_param=None error_type=requests message='OpenAI API error received' stream_error=False
+2023-06-28 11:15:24 [WARNING] Retrying langchain.llms.openai.completion_with_retry.<locals>._completion_with_retry in 4.0 seconds as it raised RateLimitError: Rate limit reached for default-gpt-3.5-turbo in organization org-RjRFj4pbNhbJbrFhmww2up33 on requests per min. Limit: 3 / min. Please try again in 20s. Contact us through our help center at help.openai.com if you continue to have issues. Please add a payment method to your account to increase your rate limit. Visit https://platform.openai.com/account/billing to add a payment method..
+2023-06-28 11:15:28 [INFO] error_code=None error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-RjRFj4pbNhbJbrFhmww2up33 on requests per min. Limit: 3 / min. Please try again in 20s. Contact us through our help center at help.openai.com if you continue to have issues. Please add a payment method to your account to increase your rate limit. Visit https://platform.openai.com/account/billing to add a payment method.' error_param=None error_type=requests message='OpenAI API error received' stream_error=False
+2023-06-28 11:15:28 [WARNING] Retrying langchain.llms.openai.completion_with_retry.<locals>._completion_with_retry in 4.0 seconds as it raised RateLimitError: Rate limit reached for default-gpt-3.5-turbo in organization org-RjRFj4pbNhbJbrFhmww2up33 on requests per min. Limit: 3 / min. Please try again in 20s. Contact us through our help center at help.openai.com if you continue to have issues. Please add a payment method to your account to increase your rate limit. Visit https://platform.openai.com/account/billing to add a payment method..
+2023-06-28 11:15:33 [INFO] error_code=None error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-RjRFj4pbNhbJbrFhmww2up33 on requests per min. Limit: 3 / min. Please try again in 20s. Contact us through our help center at help.openai.com if you continue to have issues. Please add a payment method to your account to increase your rate limit. Visit https://platform.openai.com/account/billing to add a payment method.' error_param=None error_type=requests message='OpenAI API error received' stream_error=False
+2023-06-28 11:15:33 [WARNING] Retrying langchain.llms.openai.completion_with_retry.<locals>._completion_with_retry in 4.0 seconds as it raised RateLimitError: Rate limit reached for default-gpt-3.5-turbo in organization org-RjRFj4pbNhbJbrFhmww2up33 on requests per min. Limit: 3 / min. Please try again in 20s. Contact us through our help center at help.openai.com if you continue to have issues. Please add a payment method to your account to increase your rate limit. Visit https://platform.openai.com/account/billing to add a payment method..
+2023-06-28 11:15:37 [INFO] error_code=None error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-RjRFj4pbNhbJbrFhmww2up33 on requests per min. Limit: 3 / min. Please try again in 20s. Contact us through our help center at help.openai.com if you continue to have issues. Please add a payment method to your account to increase your rate limit. Visit https://platform.openai.com/account/billing to add a payment method.' error_param=None error_type=requests message='OpenAI API error received' stream_error=False
+2023-06-28 11:15:37 [WARNING] Retrying langchain.llms.openai.completion_with_retry.<locals>._completion_with_retry in 8.0 seconds as it raised RateLimitError: Rate limit reached for default-gpt-3.5-turbo in organization org-RjRFj4pbNhbJbrFhmww2up33 on requests per min. Limit: 3 / min. Please try again in 20s. Contact us through our help center at help.openai.com if you continue to have issues. Please add a payment method to your account to increase your rate limit. Visit https://platform.openai.com/account/billing to add a payment method..
+2023-06-28 11:15:52 [INFO] Running PandasAI with openai LLM...
+2023-06-28 11:15:52 [INFO] Prompt ID: ff05de86-e1db-4c2c-98be-64cb39bf526a
+2023-06-28 11:15:52 [INFO] Using cached response
+2023-06-28 11:15:52 [INFO] Charts saving to: /opt/homebrew/lib/python3.9/site-packages/exports/charts/ff05de86-e1db-4c2c-98be-64cb39bf526a
+2023-06-28 11:15:52 [INFO] 
+Code running:
+```
+df.plot(kind='bar', x='country', y='gdp', color=['red', 'blue', 'green',
+    'yellow', 'orange'])
+plt.xlabel('Country')
+plt.ylabel('GDP')
+plt.title('GDP by Country')
+plt.savefig(
+    '/opt/homebrew/lib/python3.9/site-packages/exports/charts/ff05de86-e1db-4c2c-98be-64cb39bf526a/chart.png'
+    )
+plt.show()
+plt.close('all')
+```
+2023-06-28 11:15:52 [INFO] Answer: None
+2023-06-28 11:15:52 [INFO] Executed in: 0.10966324806213379s
+2023-06-28 21:28:08 [INFO] Running PandasAI with openai LLM...
+2023-06-28 21:28:08 [INFO] Prompt ID: 28989f98-f70b-4e20-8f54-ad85dc17431f
+2023-06-28 21:28:08 [INFO] Using cached response
+2023-06-28 21:28:08 [INFO] Charts saving to: /opt/homebrew/lib/python3.9/site-packages/exports/charts/28989f98-f70b-4e20-8f54-ad85dc17431f
+2023-06-28 21:28:08 [INFO] 
+Code running:
+```
+df.plot(kind='bar', x='country', y='gdp', color=['red', 'blue', 'green',
+    'yellow', 'orange'])
+plt.xlabel('Country')
+plt.ylabel('GDP')
+plt.title('GDP by Country')
+plt.savefig(
+    '/opt/homebrew/lib/python3.9/site-packages/exports/charts/28989f98-f70b-4e20-8f54-ad85dc17431f/chart.png'
+    )
+plt.show()
+plt.close('all')
+```
+2023-06-28 21:28:08 [INFO] Answer: None
+2023-06-28 21:28:08 [INFO] Executed in: 0.324268102645874s
